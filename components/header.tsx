@@ -27,12 +27,12 @@ export default function Header() {
                             initial={{ y: -100, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                         >
-                            <Link href={item.hash}
+                            <a href={item.hash}
                                 className={`flex w-full items-center justify-center p-3  hover:text-gray-950 transition ${activeSection == item.hash ? "text-gray-950 dark:text-gray-200" : ""}`}
                                 onClick={() => {
                                     setTimeOfLastClick(Date.now())
                                     setActiveSection(item.hash)}}
-                            >{item.title}</Link>
+                            >{item.title}</a>
 
                             {activeSection == item.hash && (
                                 <motion.span className='absolute inset-0 bg-gray-200 rounded-full -z-10 dark:bg-gray-800'
